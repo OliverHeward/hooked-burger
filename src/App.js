@@ -21,9 +21,11 @@ const Auth = React.lazy(() => {
 });
 
 const app = props => {
+  const { onTryAutoSignup } = props;
+
   useEffect(() => {
-    props.onTryAutoSignup();
-  }, []);
+    onTryAutoSignup();
+  }, [onTryAutoSignup]);
 
   // load checkout - orders and auth only when we need them
     let routes = (
